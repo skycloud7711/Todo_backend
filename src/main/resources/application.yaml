@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    #数据库名：todo_db
+    url: jdbc:mysql://localhost:3306/todo_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: #填上你自己的数据库账户名
+    password: #填上你自己的数据库账户密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 5000ms
+
+mybatis-plus:
+  configuration:
+    #驼峰命名
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      #主键自增
+      id-type: auto
